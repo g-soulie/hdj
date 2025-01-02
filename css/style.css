@@ -1485,4 +1485,38 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+.testimony-entry {
+  width: 30vw; /* La largeur est proportionnelle à 30% de la largeur de l'écran */
+  max-width: 500px; /* Limite maximale pour ne pas être trop large sur les grands écrans */
+  min-width: 200px; /* Limite minimale pour rester lisible sur les petits écrans */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: left;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajustement pour les petits écrans */
+@media (max-width: 768px) {
+  .testimony-entry {
+    width: 80%; /* Les témoignages prennent 80% de la largeur de l'écran */
+    margin: 0 auto 20px; /* Centrer et espacer les témoignages */
+  }
+}
+
+/* Ajustement pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+  .testimony-entry {
+    width: 95%; /* Pratiquement toute la largeur de l'écran */
+    margin: 0 auto 15px; /* Centrer et réduire l'espace entre les témoignages */
+  }
+}
+
+
 /*# sourceMappingURL=style.css.map */
