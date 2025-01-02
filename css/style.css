@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -1407,6 +1407,82 @@ h1, h2, h3, h4, h5, h6 {
 
 .js .animate-box {
   opacity: 0;
+}
+
+
+
+.container {
+  max-width: 80%; /* Limite à 80% de la largeur de l'écran */
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimony-slider {
+  display: flex;
+  width: 100%;
+  animation: slide 30s linear infinite; /* Animation fluide et continue */
+}
+
+.testimony-entry {
+  min-width: 20%; /* Chaque commentaire prend 33% de la largeur pour afficher 3 à la fois */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: left;
+  margin-right: 10px; /* Un petit espace entre les commentaires */
+  position: relative;
+  overflow: hidden;
+}
+
+.comment-text {
+  max-height: 150px; /* Limite la hauteur du texte */
+  overflow: hidden; /* Cache le texte excédentaire */
+  transition: max-height 0.3s ease;
+}
+
+.testimony-entry:hover .comment-text {
+  max-height: 9999px; /* Affiche tout le texte lors du survol */
+}
+
+.author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+  float: left;
+}
+
+.user {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.user small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Animation de défilement continu et fluide */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Débute à la position de départ */
+  }
+  33% {
+    transform: translateX(-33.33%); /* Déplace le slider après 33% */
+  }
+  66% {
+    transform: translateX(-66.66%); /* Déplace après 66% */
+  }
+  100% {
+    transform: translateX(-100%); /* Déplace complètement après 100% */
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
